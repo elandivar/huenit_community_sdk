@@ -1,4 +1,15 @@
-# 🤖 Huenit SDK - Complete Documentation
+# 🤖 Huenit SDK - Complete Unofficial Documentation
+
+Due to "Huenit's Robotic Arm" poor Communication - Community Takes Action
+
+After struggling with #Huenit's terrible communication and lack of proper documentation, I've reverse-engineered their SDK to create a community-driven alternative.
+
+This is a work in progress, take into account:
+  - This is reverse-engineered documentation
+  - Some things might be incorrect or incomplete
+  - We'll refine it together as a community
+  - More examples coming in the next few days
+
 
 ## 📋 Table of Contents
 1. [System Architecture](#system-architecture)
