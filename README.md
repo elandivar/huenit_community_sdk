@@ -1,8 +1,10 @@
-# 🤖 Huenit SDK - Complete Unofficial Documentation
+# Huenit SDK - Complete Unofficial Documentation
 
 Due to "Huenit's Robotic Arm" poor Communication - Community Takes Action
 
 After struggling with #Huenit's terrible communication and lack of proper documentation, I've reverse-engineered their SDK to create a community-driven alternative.
+
+## Disclaimer
 
 This is a work in progress, take into account:
   - This is reverse-engineered documentation
@@ -10,14 +12,27 @@ This is a work in progress, take into account:
   - We'll refine it together as a community
   - More examples coming in the next few days
 
-
-## 📋 Table of Contents
+## Table of Contents
 1. [System Architecture](#system-architecture)
 2. [Main Components](#main-components)
 3. [Command API](#command-api)
 4. [Python Control](#python-control)
 5. [Usage Examples](#usage-examples)
 6. [Troubleshooting](#troubleshooting)
+
+## Huenit Python Environment
+
+The Huenit robotic arm comes with an **embedded Python interpreter** located at `C:\Program Files\Huenit robotics\resources\app\resources\huenit_py\` (Windows) or equivalent path on macOS. This embedded environment provides:
+
+- **Pre-configured Python 3.10** with all necessary dependencies
+- **Huenit-specific libraries** and modules for arm control
+- **Serial communication drivers** for hardware interface
+- **Event system** for command processing
+- **G-code/M-code interpreters** for movement control
+
+**Important**: Always use the embedded Python interpreter (`huenit_env_win/python.exe` on Windows or `huenit_env_mac/bin/python3.10` on macOS) rather than your system Python, as it contains the proprietary Huenit SDK and all required dependencies. Using system Python will result in import errors and missing functionality.
+
+The embedded environment includes specialized modules like `communicator.py`, `machine.py`, `huenit_util.py`, and the complete `python_protocol_cores/` directory that are essential for controlling the robotic arm.
 
 ---
 
@@ -746,4 +761,4 @@ The Huenit system generates detailed logs. Look for:
 
 ---
 
-**© 2024 - Huenit SDK Documentation**
+**© 2025 - Edgar Landívar**
